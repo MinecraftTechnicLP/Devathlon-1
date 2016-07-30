@@ -8,15 +8,15 @@ import org.bukkit.entity.Player;
  */
 public class User {
 
-    private Player player;
+    private UUID uuid;
     private Team team;
 
     public User(Player player) {
-        this.player = player;
+        this.uuid = player.getUniqueID();
     }
 
     public Player getPlayer() {
-        return player;
+        return Bukkit.getPlayer(uuid);
     }
 
     public void setTeam(Team team) {
